@@ -1,11 +1,6 @@
 <script>
   /**
-   * Dynamic, client-side theming using CSS variables
-   * Only works with `carbon-components-svelte/css/all.css`
-   */
-
-  /**
-   * @typedef {"white" | "g10" | "g80" | "g90" | "g100"} CarbonTheme
+   * @typedef {"white" | "g10" | "g90" | "g100"} CarbonTheme
    * @event {{ theme: CarbonTheme; }} update
    * @slot {{ theme: CarbonTheme; }}
    */
@@ -51,7 +46,6 @@
   const themes = {
     white: "White",
     g10: "Gray 10",
-    g80: "Gray 80",
     g90: "Gray 90",
     g100: "Gray 100",
   };
@@ -64,7 +58,6 @@
    * @type {import("../Select/Select").SelectProps & { themes?: CarbonTheme[]; }}
    */
   export let select = {
-    themes: themeKeys,
     labelText: "Themes",
     hideLabel: false,
   };
@@ -77,13 +70,14 @@
 
   const dispatch = createEventDispatcher();
 
-  $: if (typeof window !== "undefined") {
+  // Only apply theme globally when there are no slotted contents
+  $: if (!$$slots.default && typeof window !== "undefined") {
     Object.entries(tokens).forEach(([token, value]) => {
       document.documentElement.style.setProperty(`--cds-${token}`, value);
     });
 
     if (theme in themes) {
-      document.documentElement.setAttribute("theme", theme);
+      document.documentElement.setAttribute("data-carbon-theme", theme);
       dispatch("update", { theme });
     } else {
       console.warn(
@@ -109,10 +103,14 @@
   />
 {:else if render === "select"}
   <Select {...select} bind:selected="{theme}">
-    {#each select.themes as theme (theme)}
+    {#each themeKeys as theme (theme)}
       <SelectItem value="{theme}" text="{themes[theme]}" />
     {/each}
   </Select>
 {/if}
 
-<slot theme="{theme}" />
+{#if $$slots.default}
+  <div data-carbon-theme="{theme}">
+    <slot theme="{theme}" />
+  </div>
+{/if}
