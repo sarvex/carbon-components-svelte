@@ -419,9 +419,9 @@ carbon-components@10.58.12:
     warning "^3.0.0"
 
 carbon-icons-svelte@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/carbon-icons-svelte/-/carbon-icons-svelte-12.1.0.tgz#9bad975d8621acec8b2f6244bd6308603c326d8d"
-  integrity sha512-RPU+W/AhkdPRqHMaShOdFluQZXMT6PNYrqEwPxDBvmrX2ioOYhZo1J508e0WeVX69iOqyUv6KjxrdbsoDdogeg==
+  version "12.3.0"
+  resolved "https://registry.yarnpkg.com/carbon-icons-svelte/-/carbon-icons-svelte-12.3.0.tgz#7c4dcea9c4e458bcff277a29fc0180081789f6d6"
+  integrity sha512-RZI1nJEjnpgBka4A6zwEkNNqYfV9H7WjcyQ4JYPLoMO8a7N7mAVbaG9ngHUEahxf/byaHBp+EJD3Natf1dkylQ==
 
 chalk@^2.0.0, chalk@^2.4.2:
   version "2.4.2"
