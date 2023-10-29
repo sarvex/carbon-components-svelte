@@ -21,7 +21,7 @@
     "release": "standard-version && yarn prepack"
   },
   "dependencies": {
-    "flatpickr": "4.6.9"
+    "flatpickr": "4.6.13"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.3",
