@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@sveltech/routify": "1.9.10",
-    "@sveltejs/vite-plugin-svelte": "1.0.2",
+    "@sveltejs/vite-plugin-svelte": "1.4.0",
     "carbon-components-svelte": "../",
     "carbon-icons-svelte": "11.1.0",
     "clipboard-copy": "4.0.1",
