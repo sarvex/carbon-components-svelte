@@ -24,7 +24,7 @@
     "flatpickr": "4.6.13"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "21.0.3",
+    "@rollup/plugin-commonjs": "21.1.0",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@tsconfig/svelte": "4.0.1",
     "autoprefixer": "10.4.16",
