@@ -26,7 +26,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "21.1.0",
     "@rollup/plugin-node-resolve": "15.2.3",
-    "@tsconfig/svelte": "4.0.1",
+    "@tsconfig/svelte": "5.0.2",
     "autoprefixer": "10.4.16",
     "carbon-components": "10.58.12",
     "carbon-icons-svelte": "12.3.0",
