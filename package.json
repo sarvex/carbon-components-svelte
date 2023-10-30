@@ -31,7 +31,7 @@
     "carbon-components": "10.58.12",
     "carbon-icons-svelte": "12.3.0",
     "postcss": "8.4.31",
-    "prettier": "2.7.1",
+    "prettier": "2.8.8",
     "prettier-plugin-svelte": "2.7.0",
     "rollup": "2.78.1",
     "rollup-plugin-svelte": "7.1.6",
